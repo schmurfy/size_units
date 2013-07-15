@@ -18,5 +18,6 @@ It works the same way:
 Another activesupport alternative
 
 ```ruby
-1500.human_size => "2 bytes"
+1500.human_size => "1KB, 476B"
+1500.human_size(1) => "1KB"
 ```
