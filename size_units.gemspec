@@ -10,6 +10,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.name          = "size_units"
+  gem.license      = 'MIT'
   gem.require_paths = ["lib"]
   gem.version       = SizeUnits::VERSION
 end
