@@ -19,8 +19,14 @@ describe 'TimeDuration' do
   end
   
   
-  should 'limite output' do
-    (2*@gb1 + 200*@mb1 + 780).human_size(1).should == "2GB"
+  should 'limit output' do
+    (2*@gb1 + 200*@mb1 + 780).human_size(1, false).should == "2GB"
+  end
+  
+  should 'limit and round output' do
+    s = 8157.megabytes
+    s.human_size(1, true).should == "8GB"
+    s.human_size(1, false).should == "7GB"
   end
   
 end
